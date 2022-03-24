@@ -9,7 +9,6 @@
 			<input type="number" name="angka" value="<?=isset($_POST["angka"]) ? $_POST["angka"] : ''?>"><br>
 			<button type="submit" name="submit">Konversi</button>
 		</form>
-
 		<?php
 			$hasil = NULL;
 			if(isset($_POST["submit"])){
@@ -23,8 +22,6 @@
 				}
 				echo "<h1>Hasil: $hasil</h1>";
 			}
-			
-			
 		?>
 	</body>
 </html>
