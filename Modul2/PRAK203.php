@@ -19,14 +19,12 @@
 			<input type="radio" name="ke" value="Kelvin" <?php if (isset($_POST["ke"]) and $_POST["ke"] == "Kelvin") echo "checked";?>>Kelvin<br>
 			<button type="submit" name="submit">Konversi</button>
 		</form>
-
 		<?php
 			$awal = NULL;
 			$hasil = NULL;
 			$derajat = NULL;
 			if(isset($_POST["submit"])){
 				$awal = $_POST["suhu"];
-
 				if($_POST["dari"] == "Celcius"){
 					if ($_POST["ke"] == "Celcius") {
 						$hasil = $awal;
@@ -83,15 +81,12 @@
 						$hasil = $awal;
 					}
 				}
-
 				if($_POST["ke"] == "Celcius") {$derajat = "&degC";}
 				else if($_POST["ke"] == "Fahrenheit") {$derajat = "&degF";}
 				else if($_POST["ke"] == "Rheamur") {$derajat = "&degR";}
 				else if($_POST["ke"] == "Kelvin") {$derajat = "&degK";}
 				echo "<h1>Hasil konversi: $hasil $derajat</h1>";
 			}
-			
-			
 		?>
 	</body>
 </html>
